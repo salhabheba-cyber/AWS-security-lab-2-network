@@ -1,4 +1,4 @@
-# 🔐 Lab 2: Network Security & Monitoring (3-Tier VPC)
+# 🔐 Network Security & Monitoring (3-Tier VPC)
 
 ## 📋 Overview
 
@@ -72,7 +72,7 @@ This lab demonstrates a production-ready 3-tier VPC architecture with defense-in
 |---------|---------|--------|
 | **VPC Flow Logs** | Capture all IP traffic | Enabled to CloudWatch |
 | **GuardDuty** | Threat detection | Enabled |
-| **CloudTrail** | API audit logging | Enabled (from Lab 1) |
+| **CloudTrail** | API audit logging | Enabled  |
 
 ## 🧪 Test Results
 
@@ -81,16 +81,6 @@ This lab demonstrates a production-ready 3-tier VPC architecture with defense-in
 | Bastion Host internet access | HTTP works | `curl google.com` returned HTTP 200 | ✅ PASS |
 | SSH access restricted | Only my IP | Configured with `/32` | ✅ PASS |
 | Private subnets isolation | No direct internet | Route tables have no IGW | ✅ PASS |
-
-## 💰 Cost Analysis
-
-| Service | Monthly Cost |
-|---------|--------------|
-| VPC, Subnets, Route Tables, SGs, NACLs | Free |
-| VPC Flow Logs | ~$0.50/GB |
-| GuardDuty | Free trial (30 days) |
-| Bastion Host (t2.micro) | Free tier eligible |
-| **Total** | **~$1-5/month** |
 
 
 ## 🎯 Skills Demonstrated
